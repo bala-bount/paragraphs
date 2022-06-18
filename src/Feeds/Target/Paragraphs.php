@@ -83,9 +83,9 @@ class Paragraphs extends Text implements ConfigurableTargetInterface {
     ]);
     $field_options = [];
     foreach ($field_configs as $field_config) {
-     // if (in_array($field_config->getType(), ['text', 'text_long', 'text_with_summary'])) {
+      if (in_array($field_config->getType(), ['text', 'text_long', 'text_with_summary'])) {
         $field_options[$field_config->getName()] = $field_config->label();
-     // }
+      }
     }
 
     $form['paragraph_field'] = [
